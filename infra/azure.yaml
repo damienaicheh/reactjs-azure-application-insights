@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/alpha/azure.yaml.json
+
+name: reactjs-sample
+metadata:
+  template: reactjs-sample@0.0.1-beta
+services:
+  app:
+    project: reactjs-sample
+    language: js
+    host: appservice
+infra:
+  provider: terraform
