@@ -31,9 +31,22 @@ Inside `webapp/src/ApplicationInsightsService.jsx`, pass the instrumentation key
 ## Code Deployment
 
 
-## Deployment
+## Deployment to Azure App Service
 
-WIP: Need packaging
-az webapp deployment source config-zip --resource-group <resource-group-name> --name <app-service-name> --src dist.zip
+```bash
+az login
+```
+
+```bash
+az account set --subscription <subscription-id>
+```
+
+```bash
+cd webapp
+
+zip -r webapp.zip .
+
+az webapp deploy --resource-group <resource-group-name>--name <app-service-name> --src-path webapp.zip --type zip
+```
 
 https://learn.microsoft.com/en-us/azure/azure-monitor/app/javascript-framework-extensions?tabs=react

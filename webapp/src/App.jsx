@@ -5,7 +5,7 @@ import SendManualMetricComponent from './SendManualMetricComponent'
 import SampleTrackingComponent from './SampleTrackingComponent'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { useAppInsightsContext, useTrackEvent, useTrackMetric } from "@microsoft/applicationinsights-react-js";
+import { useAppInsightsContext, useTrackEvent } from "@microsoft/applicationinsights-react-js";
 
 function App() {
   const appInsights = useAppInsightsContext();
