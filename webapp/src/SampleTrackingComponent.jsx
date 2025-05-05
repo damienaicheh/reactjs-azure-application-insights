@@ -1,10 +1,9 @@
 import React from "react";
 import { SeverityLevel } from '@microsoft/applicationinsights-web';
-import { useAppInsightsContext, useTrackMetric } from "@microsoft/applicationinsights-react-js";
+import { useAppInsightsContext } from "@microsoft/applicationinsights-react-js";
 
 const SampleTrackingComponent = () => {
     const appInsights = useAppInsightsContext();
-    const trackComponent = useTrackMetric(appInsights, "SampleTrackingComponent");
 
     function trackException() {
         appInsights.trackException({ error: new Error('some error'), severityLevel: SeverityLevel.Error });
