@@ -44,9 +44,11 @@ az account set --subscription <subscription-id>
 ```bash
 cd webapp
 
+npm run build
+
 zip -r webapp.zip .
 
-az webapp deploy --resource-group <resource-group-name>--name <app-service-name> --src-path webapp.zip --type zip
+az webapp deploy --resource-group <resource-group-name> --name <app-service-name> --src-path webapp.zip --type zip
 ```
 
 https://learn.microsoft.com/en-us/azure/azure-monitor/app/javascript-framework-extensions?tabs=react
